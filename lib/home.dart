@@ -256,11 +256,10 @@ class Home extends StatelessWidget {
             'Gallery',
             textAlign: TextAlign.left,
             style: GoogleFonts.notoSerif(
-                textStyle:
-                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-                color: const Color.fromRGBO(
-                    245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
-                ),
+              textStyle:
+                  const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+              color: const Color(0xFFE6F7F8), // 여기서 1은 불투명도를 의미합니다.
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
