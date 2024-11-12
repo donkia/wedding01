@@ -196,7 +196,7 @@ class Home extends StatelessWidget {
               ),
               Text('의   딸  '),
               Text(
-                '   슬기',
+                '  슬기',
                 style: TextStyle(fontWeight: FontWeight.w600),
               )
             ],
