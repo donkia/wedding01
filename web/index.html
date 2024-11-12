@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <base href="/wedding01/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  
+  <!-- waring 으로 인한 개선 -->
+  <!-- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  -->
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="mobile_invitation">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+   <!-- og -->
+   <meta property="og:title" content="김상동(기철)﹒최계봉의 차남 병현❤️슬기 결혼식에 초대합니다!" />
+   <meta property="og:description" content="모바일 청첩장" />
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://donkia.github.io/wedding01/#" />
+   <meta
+     property="og:image"
+     content="https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/19_nlkfdx.jpg"
+   />
+   
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>mobile_invitation</title>
+ <!-- <link rel="manifest" href="manifest.json"> -->
+  <link rel="manifest" href="/wedding01/manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "v1";
+  </script>
+  
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+  <!-- 소스 맵 로드 오류 무시 -->
+  <script>
+  if (!navigator.userAgent.includes("Safari")) {
+    var script = document.createElement('script');
+    script.src = "flutter.js.map";
+    document.head.appendChild(script);
+  }
+</script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.load({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+ 
+  <script src="main.dart.js" type="application/javascript"></script>
+  <!-- 카카오톡 공유 추가-->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script type="text/javascript">
+    Kakao.init('6352e7f677b9e03de58ce6686df06832'); // 발급받은 JavaScript 키를 입력하세요.
+  
+    function shareKakao() {
+      Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '김상동(기철)﹒최계봉의 차남 병현❤️슬기 결혼식에 초대합니다!',
+          description: '2025.01.18 토요일 오후 12시\n레노스블랑쉬웨딩홀 블랑쉬홀',
+          imageUrl: 'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+          link: {
+            mobileWebUrl: 'https://donkia.github.io/wedding01/',
+            webUrl: 'https://donkia.github.io/wedding01/'
+          }
+        },
+        buttons: [
+          {
+            title: '모바일 청첩장 보기',
+            link: {
+              mobileWebUrl: 'https://donkia.github.io/wedding01/',
+              webUrl: 'https://donkia.github.io/wedding01/'
+            }
+          }
+        ]
+      });
+    }
+  </script>
+  
+
+</body>
+</html>
