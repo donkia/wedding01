@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
           SizedBox(
               child: Image.network(
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
-            color: const Color(0xFFE6F7F8),
+            color: const Color.fromRGBO(113, 150, 187, 1),
             width: 50,
             height: 50,
           )
@@ -249,7 +249,7 @@ class Home extends StatelessWidget {
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731224462/gallery_plbv6w.webp',
             width: 30,
             height: 30,
-            color: const Color(0xFFE6F7F8),
+            color: const Color.fromRGBO(113, 150, 187, 1),
           )),
 
           Text(
@@ -258,12 +258,16 @@ class Home extends StatelessWidget {
             style: GoogleFonts.notoSerif(
               textStyle:
                   const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-              color: const Color(0xFFE6F7F8), // 여기서 1은 불투명도를 의미합니다.
+              color:
+                  const Color.fromRGBO(113, 150, 187, 1), // 여기서 1은 불투명도를 의미합니다.
             ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Divider(thickness: 1, color: Color(0xFFE6F7F8)),
+            child: Divider(
+              thickness: 1,
+              color: Color.fromRGBO(113, 150, 187, 1),
+            ),
           ),
 
           //사진 갤러리 보여주기
@@ -274,7 +278,7 @@ class Home extends StatelessWidget {
           SizedBox(
               child: Image.network(
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png',
-            color: const Color(0xFFE6F7F8),
+            color: const Color.fromRGBO(113, 150, 187, 1),
             width: 30,
             height: 30,
           )
@@ -289,15 +293,16 @@ class Home extends StatelessWidget {
           Text('마음 전하실 곳',
               textAlign: TextAlign.left,
               style: GoogleFonts.notoSerif(
-                  textStyle: const TextStyle(
-                      fontSize: 14, fontWeight: FontWeight.w700),
-                  color: const Color(0xFFE6F7F8) // 여기서 1은 불투명도를 의미합니다.
-                  )),
+                textStyle:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                color: const Color.fromRGBO(
+                    113, 150, 187, 1), // 여기서 1은 불투명도를 의미합니다.
+              )),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Divider(
               thickness: 1,
-              color: Color(0xFFE6F7F8),
+              color: Color.fromRGBO(113, 150, 187, 1),
             ),
           ),
 
@@ -311,7 +316,7 @@ class Home extends StatelessWidget {
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
             width: 30,
             height: 30,
-            color: const Color(0xFFE6F7F8),
+            color: const Color.fromRGBO(113, 150, 187, 1),
           )
 
               // Image.network(
@@ -325,15 +330,19 @@ class Home extends StatelessWidget {
             'Location',
             textAlign: TextAlign.left,
             style: GoogleFonts.notoSerif(
-                textStyle:
-                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-                color: const Color(0xFFE6F7F8) // 여기서 1은 불투명도를 의미합니다.
-                ),
+              textStyle:
+                  const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+              color:
+                  const Color.fromRGBO(113, 150, 187, 1), // 여기서 1은 불투명도를 의미합니다.
+            ),
           ),
 
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Divider(thickness: 1, color: Color(0xFFE6F7F8)),
+            child: Divider(
+              thickness: 1,
+              color: Color.fromRGBO(113, 150, 187, 1),
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -383,7 +392,7 @@ class Home extends StatelessWidget {
           SizedBox(
               child: Image.network(
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png',
-            color: const Color(0xFFE6F7F8),
+            color: const Color.fromRGBO(113, 150, 187, 1),
             width: 30,
             height: 30,
           )
@@ -399,16 +408,17 @@ class Home extends StatelessWidget {
             'Information',
             textAlign: TextAlign.left,
             style: GoogleFonts.notoSerif(
-                textStyle:
-                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-                color: const Color(0xFFE6F7F8) // 여기서 1은 불투명도를 의미합니다.
-                ),
+              textStyle:
+                  const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+              color:
+                  const Color.fromRGBO(113, 150, 187, 1), // 여기서 1은 불투명도를 의미합니다.
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Divider(
               thickness: 1,
-              color: Color(0xFFE6F7F8),
+              color: Color.fromRGBO(113, 150, 187, 1),
             ),
           ),
           const Notice(),

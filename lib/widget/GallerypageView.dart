@@ -74,7 +74,7 @@ class _GalleryPageViewState extends State<GalleryPageView> {
                         child: ColorFiltered(
                           colorFilter: const ColorFilter.mode(
                             Color.fromRGBO(
-                                245, 224, 224, 1), // Specify the desired color
+                                113, 150, 187, 1), // Specify the desired color
                             BlendMode.srcATop, // Blend mode to apply color
                           ),
                           child: Lottie.asset(
