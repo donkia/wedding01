@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -65,6 +66,8 @@ class OpenMapApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch, // 부모 위젯의 전체 너비 사용
 
@@ -72,6 +75,9 @@ class OpenMapApp extends StatelessWidget {
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           IconButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼01] 네이버지도 실행'});
               _launchNaverMap();
             },
             icon: //const Text('네이버지도'),
@@ -83,6 +89,9 @@ class OpenMapApp extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼01] 카카오지도 실행'});
               _launchKakaoMap();
             },
             icon: //const Text('카카오지도'),
@@ -94,6 +103,9 @@ class OpenMapApp extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼01] T-MAP지도 실행'});
               _launchTMap();
             },
             icon: //const Text('티맵'),

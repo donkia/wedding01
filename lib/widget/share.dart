@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart' as sharePlus;
@@ -8,6 +9,8 @@ class Share extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
     return Container(
       color: const Color(0xFFF2F2F2),
       width: double.infinity,
@@ -57,6 +60,9 @@ class Share extends StatelessWidget {
           */
           OutlinedButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼01] 카카오톡 공유하기'});
               js.context.callMethod('shareKakao');
             },
             style: OutlinedButton.styleFrom(

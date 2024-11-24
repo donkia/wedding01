@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -15,6 +16,10 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
 
   // This widget is the root of your application.
   @override
@@ -44,7 +49,7 @@ class FirebaseInit extends StatelessWidget {
       builder: (context, snapshot) {
         // 초기화가 완료되었으면 홈 화면으로 이동
         if (snapshot.connectionState == ConnectionState.done) {
-          return const Home();
+          return Home();
         }
 
         // 초기화 중일 때 로딩 화면 표시

@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wedding01/widget/GallerypageView.dart';
@@ -11,7 +12,8 @@ import 'package:wedding01/widget/share.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  Home({super.key});
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   int getDday() {
     DateTime today = DateTime.now();
@@ -23,6 +25,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    analytics.logEvent(
+        name: 'page_view', parameters: {'page_name': '[01] home_page'});
+
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
