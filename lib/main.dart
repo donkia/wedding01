@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: const FirebaseInit(),
       theme: ThemeData(
-          //   fontFamily: 'MaruBuri',
+          fontFamily: 'MaruBuri',
           primaryColor: Colors.white,
           scaffoldBackgroundColor: Colors.white),
     );

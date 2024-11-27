@@ -74,7 +74,10 @@ flutter:
     - assets/map.html
     - assets/assets/animations/swipe_hint.json # 애니메이션 파일 경로
     - assets/animations/swipe_hint.json # 애니메이션 파일 경로
-
+  fonts:
+    - family: MaruBuri
+      fonts:
+        - asset: assets/fonts/MaruBuri-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
