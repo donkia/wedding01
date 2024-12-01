@@ -61,7 +61,11 @@
     <source src="assets/audio/background-music.mp3" type="audio/mpeg">
  
   </audio>
-  
+  <script>
+    const audio = document.getElementById('background-audio');
+    audio.volume = 0.5;
+
+  </script>
 
   <script>
     window.addEventListener('load', function(ev) {
